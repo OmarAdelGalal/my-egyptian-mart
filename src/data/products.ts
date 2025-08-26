@@ -1,9 +1,30 @@
+import dairyImage from "@/assets/dairy-products.webp";
+import juicesImage from "@/assets/juices.webp";
+import cheeseImage from "@/assets/cheese.webp";
+import sweetsHoneyImage from "@/assets/sweets-honey.webp";
+import basicGroceriesImage from "@/assets/basic-groceries.webp";
+import oilsGheeImage from "@/assets/oils-ghee.webp";
+
 export interface Product {
   id: string;
   name: string;
   price: number;
   category: string;
 }
+
+export interface CategoryInfo {
+  name: string;
+  image: string;
+}
+
+export const categoryImages: Record<string, string> = {
+  "منتجات الألبان": dairyImage,
+  "العصائر": juicesImage,
+  "الجبن": cheeseImage,
+  "الحلويات والعسل": sweetsHoneyImage,
+  "البقالة الأساسية": basicGroceriesImage,
+  "الزيوت والسمن": oilsGheeImage,
+};
 
 export const products: Product[] = [
   // منتجات الألبان

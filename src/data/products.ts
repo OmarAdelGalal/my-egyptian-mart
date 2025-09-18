@@ -29,6 +29,8 @@ import imtinanHoney from "@/assets/brands/imtinan-honey.jpeg";
 import organicEggs from "@/assets/brands/organic-eggs.jpeg";
 import crystal from "@/assets/brands/crystal.webp";
 import crystalGhee from "@/assets/brands/crystal-ghee.jpeg";
+import crystalOil from "@/assets/brands/crystal-oil.jpeg";
+import coxSalt from "@/assets/brands/cox-salt.jpeg";
 import alDohaRice from "@/assets/brands/al-doha-rice.jpeg";
 
 export interface Product {
@@ -98,13 +100,13 @@ export const products: Product[] = [
   { id: "33", name: "خميرة دريم", price: 5, category: "البقالة الأساسية", image: basicGroceriesImage },
   { id: "34", name: "بيكنج بودر كوكس", price: 4, category: "البقالة الأساسية", image: basicGroceriesImage },
   { id: "35", name: "فانيليا كوكس", price: 2, category: "البقالة الأساسية", image: basicGroceriesImage },
-  { id: "36", name: "ملح كوكس 1 كيلو", price: 13, category: "البقالة الأساسية", image: basicGroceriesImage },
+  { id: "36", name: "ملح كوكس 1 كيلو", price: 13, category: "البقالة الأساسية", image: coxSalt },
   { id: "37", name: "بيض عضوي", price: 55, category: "البقالة الأساسية", image: organicEggs },
 
   // الزيوت والسمن
   { id: "38", name: "سمنة كريستال 1 كيلو", price: 85, category: "الزيوت والسمن", image: crystalGhee },
   { id: "39", name: "سمنة كريستال 2 كيلو", price: 160, category: "الزيوت والسمن", image: crystalGhee },
-  { id: "40", name: "زيت ذرة كريستال 1 لتر", price: 90, category: "الزيوت والسمن", image: crystal },
+  { id: "40", name: "زيت ذرة كريستال 1 لتر", price: 90, category: "الزيوت والسمن", image: crystalOil },
   { id: "41", name: "خل أبيض", price: 15, category: "الزيوت والسمن", image: oilsGheeImage },
   { id: "42", name: "خل هاينز 1 لتر", price: 23, category: "الزيوت والسمن", image: oilsGheeImage },
 ];

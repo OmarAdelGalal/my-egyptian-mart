@@ -45,7 +45,7 @@ const Index = () => {
         <footer className="mt-16 text-center text-muted-foreground">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Leaf className="h-5 w-5 text-fresh-green" />
-            <span>متجر البقالة الطازجة - جودة وثقة | Created by Waquak The New Code | Omar Aded </span>
+            <span>متجر البقالة الطازجة - جودة وثقة | Created by Waquak The New Code | Omar Adel </span>
           </div>
           <p className="text-sm">جميع الأسعار بالجنيه المصري</p>
         </footer>

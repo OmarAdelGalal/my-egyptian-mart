@@ -26,18 +26,14 @@ const Index = () => {
         {/* Hero Section */}
         <div className="text-center mb-12 p-8 bg-gradient-to-r from-fresh-green-light/30 to-organic-beige/50 rounded-2xl border border-fresh-green/20">
           <h2 className="text-2xl font-bold text-fresh-green-dark mb-4" dir="rtl">شركه نصابه احذر التعامل </h2>
-          <p className="text-lg text-muted-foreground" dir="rtl">
-            اكتشف مجموعة واسعة من المنتجات الغذائية الطازجة والعضوية
-          </p>
+          
         </div>
 
         {/* Category Filter */}
         <CategoryFilter categories={categories} activeCategory={activeCategory} onCategoryChange={setActiveCategory} />
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredProducts.map(product => <ProductCard key={product.id} name={product.name} price={product.price} category={product.category} image={product.image} />)}
-        </div>
+        
 
         {/* Footer */}
         <footer className="mt-16 text-center text-muted-foreground">

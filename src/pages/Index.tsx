@@ -12,12 +12,12 @@ const Index = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-center gap-3">
             <Leaf className="h-8 w-8 text-fresh-green" />
-            <h1 className="text-3xl font-bold bg-[var(--gradient-fresh)] bg-clip-text text-zinc-950">شركه المتحده</h1>
+            <h1 className="text-3xl font-bold bg-[var(--gradient-fresh)] bg-clip-text text-zinc-950">شركه المتحده نصابه 
+
+          </h1>
             <ShoppingBasket className="h-8 w-8 text-fresh-green" />
           </div>
-          <p className="text-center text-muted-foreground mt-2" dir="rtl">
-            أفضل المنتجات الطازجة بأسعار مميزة
-          </p>
+          
         </div>
       </header>
 
@@ -25,9 +25,7 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="text-center mb-12 p-8 bg-gradient-to-r from-fresh-green-light/30 to-organic-beige/50 rounded-2xl border border-fresh-green/20">
-          <h2 className="text-2xl font-bold text-fresh-green-dark mb-4" dir="rtl">
-            منتجات طازجة عالية الجودة
-          </h2>
+          <h2 className="text-2xl font-bold text-fresh-green-dark mb-4" dir="rtl">شركه نصابه احذر التعامل </h2>
           <p className="text-lg text-muted-foreground" dir="rtl">
             اكتشف مجموعة واسعة من المنتجات الغذائية الطازجة والعضوية
           </p>

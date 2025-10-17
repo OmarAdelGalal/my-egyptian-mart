@@ -1,19 +1,36 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ProductCard } from "@/components/ProductCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { products, categories } from "@/data/products";
-import { ShoppingBasket, Leaf } from "lucide-react";
+import { ShoppingBasket, Leaf, Settings } from "lucide-react";
+import { Button } from "@/components/ui/button";
 const Index = () => {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState("الكل");
   const filteredProducts = activeCategory === "الكل" ? products : products.filter(product => product.category === activeCategory);
   return <div className="min-h-screen bg-gradient-to-b from-background to-organic-beige">
       {/* Header */}
       <header className="bg-card/80 backdrop-blur-sm shadow-[var(--shadow-soft)] sticky top-0 z-50">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-center gap-3">
-            <Leaf className="h-8 w-8 text-fresh-green" />
-            <h1 className="text-3xl font-bold bg-[var(--gradient-fresh)] bg-clip-text text-zinc-950">شركه المتحده</h1>
-            <ShoppingBasket className="h-8 w-8 text-fresh-green" />
+          <div className="flex items-center justify-between">
+            <div className="w-24">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => navigate("/dashboard")}
+                className="gap-2"
+              >
+                <Settings className="h-4 w-4" />
+                <span className="hidden sm:inline">لوحة التحكم</span>
+              </Button>
+            </div>
+            <div className="flex items-center gap-3">
+              <Leaf className="h-8 w-8 text-fresh-green" />
+              <h1 className="text-3xl font-bold bg-[var(--gradient-fresh)] bg-clip-text text-zinc-950">شركه المتحده</h1>
+              <ShoppingBasket className="h-8 w-8 text-fresh-green" />
+            </div>
+            <div className="w-24"></div>
           </div>
           <p className="text-center text-muted-foreground mt-2" dir="rtl">
             أفضل المنتجات الطازجة بأسعار مميزة

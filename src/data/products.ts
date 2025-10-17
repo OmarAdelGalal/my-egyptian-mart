@@ -101,7 +101,6 @@ export const products: Product[] = [
   { id: "34", name: "بيكنج بودر كوكس", price: 4, category: "البقالة الأساسية", image: basicGroceriesImage },
   { id: "35", name: "فانيليا كوكس", price: 2, category: "البقالة الأساسية", image: basicGroceriesImage },
   { id: "36", name: "ملح كوكس 1 كيلو", price: 13, category: "البقالة الأساسية", image: coxSalt },
-  { id: "37", name: "بيض عضوي", price: 55, category: "البقالة الأساسية", image: organicEggs },
 
   // الزيوت والسمن
   { id: "38", name: "سمنة كريستال 1 كيلو", price: 85, category: "الزيوت والسمن", image: crystalGhee },

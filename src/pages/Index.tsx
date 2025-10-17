@@ -15,15 +15,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="w-24">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => navigate("/dashboard")}
-                className="gap-2"
-              >
-                <Settings className="h-4 w-4" />
-                <span className="hidden sm:inline">لوحة التحكم</span>
-              </Button>
+              
             </div>
             <div className="flex items-center gap-3">
               <Leaf className="h-8 w-8 text-fresh-green" />

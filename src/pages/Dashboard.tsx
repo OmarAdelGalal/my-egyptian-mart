@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { products as initialProducts, categories } from "@/data/products";
+import { categories } from "@/data/products";
+import { useProducts } from "@/contexts/ProductsContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -40,7 +41,7 @@ interface Product {
 const Dashboard = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
-  const [products, setProducts] = useState<Product[]>(initialProducts);
+  const { products, addProduct, updateProduct, deleteProduct } = useProducts();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [formData, setFormData] = useState({
@@ -64,11 +65,13 @@ const Dashboard = () => {
 
     if (editingProduct) {
       // تعديل منتج موجود
-      setProducts(products.map(p => 
-        p.id === editingProduct.id 
-          ? { ...p, name: formData.name, price: Number(formData.price), category: formData.category, image: formData.image }
-          : p
-      ));
+      updateProduct(editingProduct.id, {
+        ...editingProduct,
+        name: formData.name,
+        price: Number(formData.price),
+        category: formData.category,
+        image: formData.image || undefined,
+      });
       toast({
         title: "تم التعديل",
         description: "تم تعديل المنتج بنجاح",
@@ -82,7 +85,7 @@ const Dashboard = () => {
         category: formData.category,
         image: formData.image || undefined,
       };
-      setProducts([...products, newProduct]);
+      addProduct(newProduct);
       toast({
         title: "تم الإضافة",
         description: "تم إضافة المنتج بنجاح",
@@ -105,7 +108,7 @@ const Dashboard = () => {
   };
 
   const handleDelete = (id: string) => {
-    setProducts(products.filter(p => p.id !== id));
+    deleteProduct(id);
     toast({
       title: "تم الحذف",
       description: "تم حذف المنتج بنجاح",

@@ -2,11 +2,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ProductCard } from "@/components/ProductCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
-import { products, categories } from "@/data/products";
+import { categories } from "@/data/products";
+import { useProducts } from "@/contexts/ProductsContext";
 import { ShoppingBasket, Leaf, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Index = () => {
   const navigate = useNavigate();
+  const { products } = useProducts();
   const [activeCategory, setActiveCategory] = useState("الكل");
   const filteredProducts = activeCategory === "الكل" ? products : products.filter(product => product.category === activeCategory);
   return <div className="min-h-screen bg-gradient-to-b from-background to-organic-beige">

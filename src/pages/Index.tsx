@@ -8,7 +8,9 @@ import { ShoppingBasket, Leaf, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Index = () => {
   const navigate = useNavigate();
-  const { products } = useProducts();
+  const {
+    products
+  } = useProducts();
   const [activeCategory, setActiveCategory] = useState("الكل");
   const filteredProducts = activeCategory === "الكل" ? products : products.filter(product => product.category === activeCategory);
   return <div className="min-h-screen bg-gradient-to-b from-background to-organic-beige">
@@ -21,7 +23,7 @@ const Index = () => {
             </div>
             <div className="flex items-center gap-3">
               <Leaf className="h-8 w-8 text-fresh-green" />
-              <h1 className="text-3xl font-bold bg-[var(--gradient-fresh)] bg-clip-text text-zinc-950">شركه المتحده</h1>
+              <h1 className="text-3xl font-bold bg-[var(--gradient-fresh)] bg-clip-text text-zinc-950">شركه الاجود </h1>
               <ShoppingBasket className="h-8 w-8 text-fresh-green" />
             </div>
             <div className="w-24"></div>
@@ -36,12 +38,8 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="text-center mb-12 p-8 bg-gradient-to-r from-fresh-green-light/30 to-organic-beige/50 rounded-2xl border border-fresh-green/20">
-          <h2 className="text-2xl font-bold text-fresh-green-dark mb-4" dir="rtl">
-            منتجات طازجة عالية الجودة
-          </h2>
-          <p className="text-lg text-muted-foreground" dir="rtl">
-            اكتشف مجموعة واسعة من المنتجات الغذائية الطازجة والعضوية
-          </p>
+          <h2 className="text-2xl font-bold text-fresh-green-dark mb-4" dir="rtl">منتجات اللحم  عالية الجودة</h2>
+          <p className="text-lg text-muted-foreground" dir="rtl">اكتشف مجموعة واسعة من المنتجات الغذائية الطازجة والعضوية و اللحوم </p>
         </div>
 
         {/* Category Filter */}
